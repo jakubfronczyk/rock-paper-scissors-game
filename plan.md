@@ -1,7 +1,7 @@
 PLAN FOR APP:
 
 1. Create the boxes for how it looks like.
-2. Create the header.
+2. Create the header.(DONE)
 3. Creathe the Rock, Paper, Scissors buttons.
 4. Create the view for the const
 5. Create an onclick event for the rock, paper, scissors.
