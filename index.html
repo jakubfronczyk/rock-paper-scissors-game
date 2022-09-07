@@ -5,30 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="scoreboard">
-      <div class="title">
-        <img src="images/logo.svg" alt="">
-      </div>
+  <div class="container">
+    <header class="header">
+      <img class="logo" src="images/logo.svg" alt=""/>
       <div class="score">
-        <p>SCORE</p>
-        <h1>0</h1>
+        <div class="score__title">score</div>
+        <div class="score__number">12</div>
       </div>
-    </div>
-    <div class="hands">
-      <div class="paper">
-        <img src="images/icon-paper.svg" alt="">
-      </div>
-      <div class="scissors">
-        <img src="images/icon-scissors.svg" alt="">
-      </div>
-      <div class="rock">
-        <img src="images/icon-rock.svg" alt="">
-      </div>
-    </div>
+    </header>
+    <section class="game">
+      <button class="choice-btn" data-choice="paper">
+        <div class="choice paper">
+          <img src="images/icon-paper.svg" alt="Paper"/>
+        </div>
+      </button>
+      <button class="choice-btn" data-choice="scissors">
+      <div class="choice scissors">
+          <img src="images/icon-scissors.svg" alt="Scissors"/>
+        </div>
+      </button>
+      <button class="choice-btn" data-choice="rock">
+        <div class="choice rock">
+          <img src="images/icon-rock.svg" alt="Rock"/>
+        </div>
+      </button>
+    </section>
   </div>
-  
 </body>
 </html>
