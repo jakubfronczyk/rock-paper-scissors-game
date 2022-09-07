@@ -149,3 +149,64 @@ body{
 .choice-btn[data-choice="rock"]{
     grid-area: rock;
 }
+/* rules button */
+.rules-btn{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background:none;
+    outline: none;
+    border:2px solid var(--outline);
+    border-radius:0.6rem;
+    color: var(--light-text);
+    padding: 0.6rem 2.5rem;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 1.3rem;
+    letter-spacing:0.1em;
+    cursor: pointer;
+}
+.rules-btn:focus{
+    border: 2px solid #fff;
+}
+/* rules modal */
+.modal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    background:var(--shadow-medium);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+.modal__container{
+    background:#fff;
+    border-radius:0.5rem;
+}
+.modal__header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 2rem 1rem;
+}
+.modal__heading{
+    font-size:1.5rem;
+    color: var(--dark-text);
+}
+.close-btn{
+    border: none;
+    outline: none;
+    background:none;
+    cursor: pointer;
+}
+.rules-img{
+    padding:2rem 4rem;
+}
+.show-modal{
+    opacity: 1;
+    pointer-events: initial;
+}
