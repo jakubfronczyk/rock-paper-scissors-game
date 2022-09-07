@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </head>
-<body>
+<body class="preloader">
   <div class="container">
     <header class="header">
       <img class="logo" src="images/logo.svg" alt=""/>
@@ -34,6 +34,14 @@
       </button>
     </section>
   </div>
+
+  <section class="results">
+    <h2 class="results__heading">you picked</h2>
+    <h2 class="results__heading">the house picked</h2>
+    <div class="results__result"></div>
+    <div class="results__result"></div>
+  </section>
+
   <button class="rules-btn" tabindex="1">rules</button>
   <div class="modal">
     <div class="modal__container">
