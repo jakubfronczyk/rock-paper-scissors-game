@@ -1,5 +1,4 @@
 PLAN FOR APP:
-
 1. Create the boxes for how it looks like.
 2. Create the header.(DONE)
 3. Creathe the Rock, Paper, Scissors buttons.
