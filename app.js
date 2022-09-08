@@ -7,9 +7,6 @@ const btnRules = document.querySelector(".rules-btn")
 const btnClose = document.querySelector(".close-btn")
 const modalRules = document.querySelector(".modal")
 
-const resultWinner = document.querySelector(".results__winner")
-const resultText = document.querySelector(".results__text")
-
 const CHOICES =[
     {
         name: "paper",
@@ -28,6 +25,14 @@ const choiceButtons = document.querySelectorAll('.choice-btn')
 const gameDiv = document.querySelector('.game')
 const resultsDiv = document.querySelector('.results')
 const resultDivs = document.querySelectorAll('.results__result')
+
+const resultWinner = document.querySelector(".results__winner")
+const resultText = document.querySelector(".results__text")
+
+const playAgainBtn = document.querySelector(".play-again")
+
+const scoreNumber = document.querySelector(".score__number")
+let score = 0
 
 //game logic
 choiceButtons.forEach(button => {
@@ -71,19 +76,46 @@ function displayWinner(results){
 
         if (userWins){
             resultText.innerText = "you win"
+            resultDivs[0].classList.toggle("winner")
+            keepScore(1)
         } else if (aiWins){
             resultText.innerText = "you lose"
+            resultDivs[1].classList.toggle("winner")
+            keepScore(-1)
         }else{
             resultText.innerText = "draw"
         }
-        resultWinner.classList.toggle("hidden")
-        resultsDiv.classList.toggle("show-winner")
 }, 1000)
+    resultWinner.classList.toggle("hidden")
+    resultsDiv.classList.toggle("show-winner")
 }
 
 function isWinner(results){
     return results[0].beats === results[1].name
 }
+
+function keepScore(point){
+    score += point
+    scoreNumber.innerText = score
+
+
+}
+
+//play again
+playAgainBtn.addEventListener('click', () => {
+    gameDiv.classList.toggle("hidden")
+    resultsDiv.classList.toggle("hidden")
+
+    resultDivs.forEach(resultDiv => {
+        resultDiv.innerHTML = ""
+        resultDiv.classList.remove("winner")
+    })
+    
+    resultText.innerText = "";
+    resultWinner.classList.toggle("hidden")
+    resultsDiv.classList.toggle("show-winner")
+})
+
 // show/hide rules
 btnRules.addEventListener("click", () =>{
     modalRules.classList.toggle("show-modal");
